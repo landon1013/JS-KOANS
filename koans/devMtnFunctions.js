@@ -1,13 +1,20 @@
 describe('First Functions', function(){
   it('should create a function returns the current year', function(){
     //Write a function called getYear that returns the current year
+      var getYear = function() {
+          var current = new Date().getFullYear();
+          return current;
+      }
 
     expect(getYear()).toBe(2014);
   });
   it('should create a function returns the current year and saves it', function(){
     //Write a function that returns the current year. Then call that function and save the returned value
     //to a variable called currentYearVar
-
+    var getYear = function() {
+        var current = new Date().getFullYear();
+        var currentYearVar = getYear();
+    }
 
     expect(currentYearVar).toBe(2014);
   });
